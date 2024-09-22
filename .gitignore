@@ -1,3 +1,8 @@
-__pycache__
+**/__pycache__
 .vscode
 .ipynb_checkpoints
+**/.pytest_cache
+
+**/run.py
+**/*_public_test
+**/.DS_Store
