@@ -4,5 +4,5 @@
 **/.pytest_cache
 
 **/run.py
-**/*_public_test
+**/*public_test*
 **/.DS_Store
