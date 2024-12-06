@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 def train_svm_and_predict(train_features, train_target, test_features):
     pipeline = Pipeline([
         ['scaler', StandardScaler()],
-        ['clf', SVC(kernel='rbf', C=np.float64(56.898660290183045))]
+        ['clf', SVC(kernel='rbf', C=np.float64(56.898660290183045), class_weight={0: 1.2, 1: 1})]
     ])
 
     # np.random.seed(232)
@@ -25,7 +25,7 @@ prefix='public_tests/00_test_data_input/'
 X = np.load(prefix + 'train/cX_train.npy')
 y = np.load(prefix + 'train/cy_train.npy')
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=63)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=777)
 
 print(np.unique(y_train, return_counts=True))
 
