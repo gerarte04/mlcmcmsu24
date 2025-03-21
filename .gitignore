@@ -7,3 +7,5 @@ run.py
 *public_test*
 .DS_Store
 tests
+
+catboost_info
